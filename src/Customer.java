@@ -2,7 +2,8 @@ import java.util.concurrent.Semaphore;
 
 public class Customer extends Thread
 {
-    private int id, movieID;
+    private final int id;
+    private int movieID;
     private String foodOrder;
     private boolean movieAvailable;
     public Semaphore beingServed;
@@ -17,30 +18,30 @@ public class Customer extends Thread
     public void run()
     {
         try {
-            selectMovie();
+            selectMovie();                                                                                              //randomly select film
             Theater.mutexQueueBoxOfficeAgent.acquire();
-            queueBoxOfficeWorker();
-            Theater.customerRdyBoxOfficeAgent.release();
+            queueBoxOfficeWorker();                                                                                     //Customer lines up for Box Office
+            Theater.customerRdyBoxOfficeAgent.release();                                                                //Customer is rdy for box Office
             Theater.mutexQueueBoxOfficeAgent.release();
-            beingServed.acquire();
-            if (movieAvailable)
+            beingServed.acquire();                                                                                      //Customer is being served by Box Office
+            if (movieAvailable)                                                                                         //Check film availability
             {
                 Theater.mutexQueueTicketTaker.acquire();
-                queueTicketTaker();
-                Theater.customerRdyTicketTaker.release();                                                               //TicketTaker takes customer
-                Theater.mutexQueueTicketTaker.release();                                                                //Customer leaves queue
-                beingServed.acquire();
-                if (visitConcessionStand())
+                queueTicketTaker();                                                                                     //Customer lines up for ticket taker
+                Theater.customerRdyTicketTaker.release();                                                               //tell ticket taker customer is rdy
+                Theater.mutexQueueTicketTaker.release();
+                beingServed.acquire();                                                                                  //Customer is being served by ticket taker
+                if (visitConcessionStand())                                                                             //decide whether to visit concession stand
                 {
-                    selectFoodOrder();
+                    selectFoodOrder();                                                                                  //Select food
                     Theater.mutexQueueConcessionStandWorker.acquire();
-                    queueConcessionStandWorker();
-                    Theater.customerRdyConcessionStandWorker.release();
+                    queueConcessionStandWorker();                                                                       //Customer lines up for food
+                    Theater.customerRdyConcessionStandWorker.release();                                                 //tell Concession stand customer is rdy
                     Theater.mutexQueueConcessionStandWorker.release();
-                    beingServed.acquire();
+                    beingServed.acquire();                                                                              //Customer is being served by Concession stand
                 }
 
-                enterTheater();
+                enterTheater();                                                                                         //Enter the Theater
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
@@ -93,7 +94,7 @@ public class Customer extends Thread
         System.out.println("Customer " + id + " in line to buy " + foodOrder);
     }
 
-    private void selectFoodOrder()
+    private void selectFoodOrder()                                                                                      //33% chance for each order
     {
         int foodOrderID = Theater.rng.nextInt(3);
         if (foodOrderID == 0)
@@ -112,9 +113,6 @@ public class Customer extends Thread
 
     private boolean visitConcessionStand()                                                                              //50% chance to visit Concession stand
     {
-        if (Theater.rng.nextInt(2) == 0)
-            return true;
-        else
-            return false;
+        return Theater.rng.nextInt(2) == 0;
     }
 }

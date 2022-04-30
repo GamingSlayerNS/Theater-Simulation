@@ -1,6 +1,6 @@
 public class BoxOfficeAgent extends Thread
 {
-    private int id;
+    private final int id;
     private Customer servingCustomer;
     public BoxOfficeAgent(int id)
     {
@@ -14,12 +14,12 @@ public class BoxOfficeAgent extends Thread
         while (true)
         {
             try {
-                Theater.customerRdyBoxOfficeAgent.acquire();
+                Theater.customerRdyBoxOfficeAgent.acquire();                                                            //Check queue
                 Theater.mutexQueueBoxOfficeAgent.acquire();
-                queueBoxOfficeAgent();
+                queueBoxOfficeAgent();                                                                                  //Accept Customer from queue
                 Theater.mutexQueueBoxOfficeAgent.release();
                 Theater.mutexMovieArray.acquire();
-                checkMovieAvailability();
+                checkMovieAvailability();                                                                               //Check film availability from seats
                 Theater.mutexMovieArray.release();
 
                 //process
@@ -28,7 +28,7 @@ public class BoxOfficeAgent extends Thread
                     System.out.println("Box office agent " + id + " sold ticket for " + Theater.movies[servingCustomer.getMovieID()] + " to customer " + servingCustomer.getID());
                 else
                     System.out.println("Customer " + servingCustomer.getID() + " could not buy ticket, movie " + Theater.movies[servingCustomer.getMovieID()] + " is sold out");
-                servingCustomer.beingServed.release();
+                servingCustomer.beingServed.release();                                                                  //Finish serving customer
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

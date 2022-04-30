@@ -1,6 +1,6 @@
 public class TicketTaker extends Thread
 {
-    private int id;
+    private final int id;
     private Customer servingCustomer;
     public TicketTaker(int id)
     {
@@ -14,15 +14,15 @@ public class TicketTaker extends Thread
         while (true)
         {
             try {
-                Theater.customerRdyTicketTaker.acquire();
+                Theater.customerRdyTicketTaker.acquire();                                                               //Check queue
                 Theater.mutexQueueTicketTaker.acquire();
-                queueTicketTaker();
+                queueTicketTaker();                                                                                     //Accept Customer from queue
                 Theater.mutexQueueTicketTaker.release();
 
                 //process
                 sleep(250);                                                                                       //Wait 15/60s while ticket is taken.
                 System.out.println("Ticket taken from customer " + servingCustomer.getID());
-                servingCustomer.beingServed.release();
+                servingCustomer.beingServed.release();                                                                  //Finish serving customer
             } catch (InterruptedException e){
                 e.printStackTrace();
             }
