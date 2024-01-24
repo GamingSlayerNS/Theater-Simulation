@@ -1,0 +1,135 @@
+Box office agent 0 created
+Box office agent 1 created
+Ticket taker created
+Concession stand worker created
+Theater is open
+Customer 1 created, buying ticket to Beauty and the Beast
+Customer 3 created, buying ticket to Alice in Wonderland 
+Customer 13 created, buying ticket to Finding Nemo       
+Customer 7 created, buying ticket to Toy Story
+Customer 11 created, buying ticket to 101 Dalmatians     
+Customer 12 created, buying ticket to Finding Nemo       
+Customer 8 created, buying ticket to Alice in Wonderland 
+Customer 10 created, buying ticket to 101 Dalmatians     
+Customer 5 created, buying ticket to Beauty and the Beast
+Customer 2 created, buying ticket to Beauty and the Beast
+Customer 9 created, buying ticket to Toy Story
+Customer 6 created, buying ticket to Alice in Wonderland 
+Customer 14 created, buying ticket to 101 Dalmatians
+Customer 4 created, buying ticket to Finding Nemo
+Customer 0 created, buying ticket to 101 Dalmatians
+Box office agent 1 serving customer 1
+Box office agent 0 serving customer 3
+Box office agent 0 sold ticket for Alice in Wonderland to customer 3
+Box office agent 1 sold ticket for Beauty and the Beast to customer 1
+Box office agent 0 serving customer 13
+Customer 3 in line to see ticket taker
+Box office agent 1 serving customer 7
+Customer 1 in line to see ticket taker
+Ticket taken from customer 3
+Customer 3 enters theater to watch Alice in Wonderland
+Ticket taken from customer 1
+Customer 1 in line to buy Popcorn and Soda
+Order for Popcorn and Soda taken from customer 1
+Box office agent 1 sold ticket for Toy Story to customer 7
+Box office agent 0 sold ticket for Finding Nemo to customer 13
+Box office agent 1 serving customer 11
+Customer 7 in line to see ticket taker
+Box office agent 0 serving customer 12
+Customer 13 in line to see ticket taker
+Ticket taken from customer 7
+Customer 7 in line to buy Soda
+Ticket taken from customer 13
+Customer 13 in line to buy Popcorn and Soda
+Box office agent 1 sold ticket for 101 Dalmatians to customer 11
+Box office agent 0 sold ticket for Finding Nemo to customer 12
+Box office agent 1 serving customer 8
+Customer 11 in line to see ticket taker
+Box office agent 0 serving customer 10
+Customer 12 in line to see ticket taker
+Ticket taken from customer 11
+Customer 11 in line to buy Soda
+Popcorn and Soda given to customer 1
+Order for Soda taken from customer 7
+Customer 1 enters theater to watch Beauty and the Beast
+Ticket taken from customer 12
+Customer 12 enters theater to watch Finding Nemo
+Box office agent 1 sold ticket for Alice in Wonderland to customer 8
+Box office agent 0 sold ticket for 101 Dalmatians to customer 10
+Box office agent 1 serving customer 5
+Customer 8 in line to see ticket taker
+Box office agent 0 serving customer 2
+Customer 10 in line to see ticket taker
+Ticket taken from customer 8
+Customer 8 in line to buy Popcorn and Soda
+Ticket taken from customer 10
+Customer 10 enters theater to watch 101 Dalmatians
+Box office agent 0 sold ticket for Beauty and the Beast to customer 2
+Box office agent 0 serving customer 9
+Box office agent 1 sold ticket for Beauty and the Beast to customer 5
+Customer 2 in line to see ticket taker
+Box office agent 1 serving customer 6
+Customer 5 in line to see ticket taker
+Ticket taken from customer 2
+Customer 2 enters theater to watch Beauty and the Beast
+Soda given to customer 7
+Order for Popcorn and Soda taken from customer 13
+Customer 7 enters theater to watch Toy Story
+Ticket taken from customer 5
+Customer 5 in line to buy Popcorn and Soda
+Box office agent 0 sold ticket for Toy Story to customer 9
+Box office agent 1 sold ticket for Alice in Wonderland to customer 6
+Box office agent 0 serving customer 14
+Customer 9 in line to see ticket taker
+Box office agent 1 serving customer 4
+Customer 6 in line to see ticket taker
+Ticket taken from customer 9
+Customer 9 enters theater to watch Toy Story
+Ticket taken from customer 6
+Customer 6 enters theater to watch Alice in Wonderland
+Box office agent 1 sold ticket for Finding Nemo to customer 4
+Box office agent 0 sold ticket for 101 Dalmatians to customer 14
+Box office agent 1 serving customer 0
+Customer 4 in line to see ticket taker
+Customer 14 in line to see ticket taker
+Ticket taken from customer 4
+Customer 4 enters theater to watch Finding Nemo
+Popcorn and Soda given to customer 13
+Order for Soda taken from customer 11
+Customer 13 enters theater to watch Finding Nemo
+Ticket taken from customer 14
+Customer 14 in line to buy Soda
+Box office agent 1 sold ticket for 101 Dalmatians to customer 0
+Customer 0 in line to see ticket taker
+Ticket taken from customer 0
+Customer 0 enters theater to watch 101 Dalmatians
+Customer 0 enjoys the movie.
+Customer 1 enjoys the movie.
+Customer 2 enjoys the movie.
+Customer 3 enjoys the movie.
+Customer 4 enjoys the movie.
+Soda given to customer 11
+Customer 11 enters theater to watch 101 Dalmatians
+Order for Popcorn and Soda taken from customer 8
+Popcorn and Soda given to customer 8
+Order for Popcorn and Soda taken from customer 5
+Customer 8 enters theater to watch Alice in Wonderland
+Popcorn and Soda given to customer 5
+Order for Soda taken from customer 14
+Customer 5 enters theater to watch Beauty and the Beast
+Customer 5 enjoys the movie.
+Customer 6 enjoys the movie.
+Customer 7 enjoys the movie.
+Customer 8 enjoys the movie.
+Customer 9 enjoys the movie.
+Customer 10 enjoys the movie.
+Customer 11 enjoys the movie.
+Customer 12 enjoys the movie.
+Customer 13 enjoys the movie.
+Soda given to customer 14
+Customer 14 enters theater to watch 101 Dalmatians
+Customer 14 enjoys the movie.
+Closing the Concession Stand...
+Closing the Box Office...
+Closing the Box Office...
+Closing the Ticket Entrance...

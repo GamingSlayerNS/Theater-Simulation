@@ -8,7 +8,7 @@ import java.util.concurrent.Semaphore;
 
 public class Theater
 {
-    public static int numCustomers = 50, numBoxOfficeAgents = 2;
+    public static int numCustomers = 15, numBoxOfficeAgents = 2;
 
     //Global variables
     static String[] movies;
@@ -26,6 +26,7 @@ public class Theater
     static Semaphore customerRdyBoxOfficeAgent = new Semaphore(0);
     static Semaphore customerRdyTicketTaker = new Semaphore(0);
     static Semaphore customerRdyConcessionStandWorker = new Semaphore(0);
+
     public static void main(String[] args) throws FileNotFoundException
     {
         //Reading input file
@@ -72,7 +73,7 @@ public class Theater
         for (int i = 0; i < numCustomers; i++) {
             try {
                 customers[i].join();
-                System.out.println("Joined customer " + i);
+                System.out.println("Customer " + i + " enjoys the movie.");
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

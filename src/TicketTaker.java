@@ -24,7 +24,7 @@ public class TicketTaker extends Thread
                 System.out.println("Ticket taken from customer " + servingCustomer.getID());
                 servingCustomer.beingServed.release();                                                                  //Finish serving customer
             } catch (InterruptedException e){
-                e.printStackTrace();
+                System.out.println("Closing the Ticket Entrance...");
             }
         }
     }

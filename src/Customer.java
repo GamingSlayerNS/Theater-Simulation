@@ -77,6 +77,7 @@ public class Customer extends Thread
     {
         System.out.println("Customer " + id + " enters theater to watch " + Theater.movies[movieID]);
     }
+    
     private void queueBoxOfficeWorker()
     {
         Theater.queueBoxOfficeAgent.add(this);

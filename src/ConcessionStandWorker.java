@@ -25,7 +25,7 @@ public class ConcessionStandWorker extends Thread
                 System.out.println(servingCustomer.getFoodOrder() + " given to customer " + servingCustomer.getID());
                 servingCustomer.beingServed.release();                                                                  //Finish serving customer
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println("Closing the Concession Stand...");
             }
         }
     }

@@ -30,7 +30,7 @@ public class BoxOfficeAgent extends Thread
                     System.out.println("Customer " + servingCustomer.getID() + " could not buy ticket, movie " + Theater.movies[servingCustomer.getMovieID()] + " is sold out");
                 servingCustomer.beingServed.release();                                                                  //Finish serving customer
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                System.out.println("Closing the Box Office...");
             }
         }
     }
